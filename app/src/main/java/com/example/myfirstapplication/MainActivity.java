@@ -187,13 +187,19 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-
+        outState.putString("NUMBER", String.valueOf((textCalc.getText())));
+        outState.putString("RESULT", String.valueOf((result.getText())));
+        if (operand.getText().length()<0)
+            outState.putString("OPERAND", String.valueOf(operand.getText()));
         super.onSaveInstanceState(outState);
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        textCalc.setText(savedInstanceState.getString("NUMBER"));
+        result.setText(savedInstanceState.getString("RESULT"));
+        operand.setText(savedInstanceState.getString("OPERAND"));
 
     }
 }
