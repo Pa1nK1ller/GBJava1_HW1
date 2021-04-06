@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="MyTextStyle" parent="AppTheme">
+        <item name="android:textSize">28sp</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:background">#61000000</item>
+    </style>
+
+    <style name="MyButtonStyle_Button" parent="AppTheme">
+        <item name="android:layout_width">80dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="backgroundTint">#673AB7</item>
+    </style>
+
+    <style name="MyStyle" parent="AppTheme">
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:textColor">@color/design_default_color_primary</item>
+    </style>
+
+
+</resources>
